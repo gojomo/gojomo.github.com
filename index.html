@@ -1,4 +1,17 @@
+<script src="http://jquery.com/src/jquery-latest.js">
+</script>
+
 <iframe width=100% id="inner" src="http://github.com/gojomo/gojomo.github.com/tree/master"></iframe>
 
-<span id="span">foo</span>
+<p/>
+
+Your username is <span id="scrapedname">n/a</span>
+
+<script>
+$(function() {
+  $('inner').load( function() {
+     alert($(this.contentDocument).find('#name').html());
+  })
+});
+</script>
 
