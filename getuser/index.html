@@ -1,13 +1,19 @@
 <script src="http://jquery.com/src/jquery-latest.js">
 </script>
+<p>
+A page at gojomo.github.com found your username to be
+<span id="outername" style="color:green; font-weight:bold"></span>
+</p>
 
-<iframe width=100% id="inner" src="http://github.com/gojomo/scratch/raw/master/getuser/index.html"></iframe>
+<hr/>
+
+<iframe width=100% height=80% id="inner" src="http://github.com/gojomo/scratch/raw/master/getuser/index.html"></iframe>
 
 <script>
 document.domain="github.com";
 $(function() {
   $('#inner').load( function() {
-     alert($(this.contentWindow.document).find('#scrapedname').html());
+     $('#outername').text($(this.contentWindow.document).find('#scrapedname').text());
   })
 });
 </script>
