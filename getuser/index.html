@@ -1,0 +1,15 @@
+<script src="http://jquery.com/src/jquery-latest.js">
+</script>
+
+<iframe width=100% id="inner" src="http://github.com/gojomo/scratch/raw/master/getuser/index.html"></iframe>
+
+<script>
+document.domain="github.com";
+$(function() {
+  $('inner').load( function() {
+     alert($(this.contentWindow.document).find('#scrapedname').html());
+  })
+});
+</script>
+
+
