@@ -6,7 +6,7 @@
 <script>
 document.domain="github.com";
 $(function() {
-  $('#inner').load( function() {
+  $('inner').load( function() {
      alert($(this.contentWindow.document).find('#scrapedname').html());
   })
 });
